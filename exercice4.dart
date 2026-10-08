@@ -1,3 +1,4 @@
+
 class Media {
   final String titre;
 
@@ -7,7 +8,6 @@ class Media {
     print('Ceci est un média générique.');
   }
 }
-
 class Livre extends Media {
   final String auteur;
 
@@ -18,7 +18,6 @@ class Livre extends Media {
     print('Ceci est un Livre : $titre par $auteur.');
   }
 }
-
 class Film extends Media {
   final int dureeMinutes;
 
@@ -29,16 +28,15 @@ class Film extends Media {
     print('Ceci est un Film : $titre, durée : $dureeMinutes minutes.');
   }
 }
-
 void main() {
   List<Media> catalogue = [
     Livre('Le Petit Prince', 'Antoine de Saint-Exupéry'),
-    Livre("L’Étranger", "Albert Camus"),
+    Livre('L\'étranger', 'Albert Camus'),
     Film('Intouchables', 112),
     Film('Le Voyage de Chihiro', 125),
   ];
 
-  for (final media in catalogue) {
+  for (var media in catalogue) {
     media.afficherType();
   }
 }
