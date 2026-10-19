@@ -6,6 +6,13 @@ void main() {
   livre2.afficherInfos();
   print('Nombre de pages : ${livre1.pages}');
 Livre.afficherTotal();
+  var roman1 = Roman('Sherlock Holmes', 'Arthur Conan Doyle', 'Policier');
+  var roman2 = Roman('Harry Potter', 'J.K. Rowling', 'Fantastique');
+
+  roman1.afficherGenre();
+  roman2.afficherGenre();
+
+  Livre.afficherTotal();
 }
 
 class Livre {
@@ -30,5 +37,17 @@ class Livre {
 
   static void afficherTotal() {
     print('Nombre total de livres : $totalLivres');
+  }
+}
+
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre)
+      : super(titre, auteur);
+
+  void afficherGenre() {
+    afficherInfos();
+    print('Genre : $genre');
   }
 }
