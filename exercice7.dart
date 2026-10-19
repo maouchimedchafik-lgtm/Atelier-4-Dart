@@ -7,3 +7,10 @@ class Tache {
     nombreTotal++;
   }
 }
+void main() {
+  var tache1 = Tache('Faire les devoirs');
+  var tache2 = Tache('Etudier Dart');
+  var tache3 = Tache('Terminer atelier 4');
+
+  print('Nombre total de taches : ${Tache.nombreTotal}');
+}
